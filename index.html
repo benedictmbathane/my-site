@@ -17,14 +17,12 @@
 
     /* NAVBAR */
     .nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
       padding: 15px;
       background: white;
       position: sticky;
       top: 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
     .nav a {
@@ -36,7 +34,16 @@
     .nav a:hover {
       color: #2563eb;
     }
+    .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
 
+.nav-links a {
+    margin: 0 15px;
+}
     /* CONTAINER */
     .container {
       max-width: 900px;
@@ -117,14 +124,32 @@
 
 <body>
 
+<div class="lang-switch">
+  <button onclick="showRU()">Русский</button>
+  <button onclick="showEN()">English</button>
+</div>
+
 <!-- НАВИГАЦИЯ -->
 <div class="nav">
-  <a href="#bio">Обо мне</a>
-  <a href="#education">Образование</a>
-  <a href="#interests">Интересы</a>
-  <a href="#skills">Навыки</a>
-  <a href="#blog">Блог</a>
+
+  <div class="ru nav-links">
+    <a href="#bio">Обо мне</a>
+    <a href="#education">Образование</a>
+    <a href="#interests">Интересы</a>
+    <a href="#skills">Навыки</a>
+    <a href="#blog">Блог</a>
+  </div>
+
+  <div class="en nav-links">
+    <a href="#bio">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#interests">Interests</a>
+    <a href="#skills">Skills</a>
+    <a href="#blog">Blog</a>
+  </div>
+
 </div>
+
 
 <div class="container">
 
@@ -133,14 +158,24 @@
     <img src="avatar.jpg" class="avatar">
 
     <div>
-      <h1>Benedict Mbathane</h1>
-      <p>Студент математики и компьютерных наук</p>
-      <a href="#" class="button">Скачать CV</a>
+    <div class="ru">
+  <h1>Benedict Mbathane</h1>
+  <p>Студент математики и компьютерных наук</p>
+  <a href="#" class="button">Скачать CV</a>
+</div>
+
+<div class="en">
+  <h1>Benedict Mbathane</h1>
+  <p>Mathematics and Computer Science Student</p>
+  <a href="#" class="button">Download CV</a>
+</div>
     </div>
   </div>
 
   <!-- SUMMARY -->
   <div class="section">
+
+  <div class="ru">
     <h2>Профессиональное резюме</h2>
     <p>
       Я студент Университета РУДН, изучаю математику и компьютерные науки.
@@ -148,8 +183,20 @@
     </p>
   </div>
 
+  <div class="en">
+    <h2>Professional Summary</h2>
+    <p>
+      I am a student at RUDN University studying Mathematics and Computer Science.
+      I am interested in programming, artificial intelligence, and web development.
+    </p>
+  </div>
+
+</div>
+
   <!-- EDUCATION -->
   <div class="section" id="education">
+
+  <div class="ru">
     <h2>Образование</h2>
 
     <div class="card">
@@ -157,20 +204,49 @@
 
       Университет РУДН
 
-      2025 – 2029
+      2025–2029
     </div>
   </div>
 
+  <div class="en">
+    <h2>Education</h2>
+
+    <div class="card">
+      <strong>Bachelor's Degree</strong>
+
+      RUDN University
+
+      2025–2029
+    </div>
+  </div>
+
+</div>
+
+
   <!-- INTERESTS -->
   <div class="section" id="interests">
+
+  <div class="ru">
     <h2>Интересы</h2>
+
     <span class="tag">Искусственный интеллект</span>
     <span class="tag">Веб-разработка</span>
     <span class="tag">Математика</span>
   </div>
 
-  <!-- SKILLS -->
+  <div class="en">
+    <h2>Interests</h2>
+
+    <span class="tag">Artificial Intelligence</span>
+    <span class="tag">Web Development</span>
+    <span class="tag">Mathematics</span>
+  </div>
+
+</div>
+
   <div class="section" id="skills">
+
+  <div class="ru">
     <h2>Навыки</h2>
     <ul>
       <li>Python (начальный уровень)</li>
@@ -178,140 +254,333 @@
       <li>Алгоритмы и структуры данных</li>
     </ul>
   </div>
-<!-- EXPERIENCE -->
-<div class="section" id="experience">
-  <h2>Опыт</h2>
 
-  <div class="card">
-    <strong>Учебные проекты</strong>
-    <p>
-      Разработка персонального сайта с использованием HTML и CSS.
-      Работа с Git и GitHub для контроля версий.
-    </p>
-  </div>
-
-  <div class="card">
-    <strong>Самостоятельное обучение</strong>
-    <p>
-      Изучение Python, алгоритмов и веб-разработки через онлайн-курсы.
-    </p>
-  </div>
-
-</div>
-
-<!-- ACCOMPLISHMENTS -->
-<div class="section" id="accomplishments">
-  <h2>Достижения</h2>
-
-  <div class="card">
+  <div class="en">
+    <h2>Skills</h2>
     <ul>
-      <li>Создал персональный веб-сайт</li>
-      <li>Освоил основы HTML и CSS</li>
-      <li>Изучил основы Git и GitHub</li>
-      <li>Начал изучение Python</li>
+      <li>Python (Beginner)</li>
+      <li>Git and GitHub</li>
+      <li>Algorithms and Data Structures</li>
     </ul>
   </div>
 
 </div>
+<div class="section" id="experience">
+
+  <div class="ru">
+    <h2>Опыт</h2>
+
+    <div class="card">
+      <strong>Учебные проекты</strong>
+      <p>
+        Разработка персонального сайта с использованием HTML и CSS.
+        Работа с Git и GitHub для контроля версий.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Самостоятельное обучение</strong>
+      <p>
+        Изучение Python, алгоритмов и веб-разработки через онлайн-курсы.
+      </p>
+    </div>
+  </div>
+
+  <div class="en">
+    <h2>Experience</h2>
+
+    <div class="card">
+      <strong>Academic Projects</strong>
+      <p>
+        Development of a personal website using HTML and CSS.
+        Working with Git and GitHub for version control.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Self-Study</strong>
+      <p>
+        Learning Python, algorithms, and web development through online courses.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="section" id="accomplishments">
+
+  <div class="ru">
+    <h2>Достижения</h2>
+
+    <div class="card">
+      <ul>
+        <li>Создал персональный веб-сайт</li>
+        <li>Освоил основы HTML и CSS</li>
+        <li>Изучил основы Git и GitHub</li>
+        <li>Начал изучение Python</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="en">
+    <h2>Accomplishments</h2>
+
+    <div class="card">
+      <ul>
+        <li>Created a personal website</li>
+        <li>Learned the basics of HTML and CSS</li>
+        <li>Learned the basics of Git and GitHub</li>
+        <li>Began studying Python</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
 <!-- SCIENTIFIC PROFILES -->
 <div class="section" id="science">
-  <h2>Научные и библиометрические ресурсы</h2>
 
-  <div class="card">
-    <ul>
-      <li><a href="https://elibrary.ru/" target="_blank">eLibrary</a></li>
-      <li><a href="https://scholar.google.com/" target="_blank">Google Scholar</a></li>
- <li><a href="https://orcid.org/0009-0002-7903-247X"_blank">ORCID</a></li>
-      <li><a href="https://www.mendeley.com/" target="_blank">Mendeley</a></li>
-      <li><a href="https://www.researchgate.net/" target="_blank">ResearchGate</a></li>
-      <li><a href="https://www.academia.edu/" target="_blank">Academia.edu</a></li>
-      <li><a href="https://arxiv.org/" target="_blank">arXiv</a></li>
-      <li><a href="https://github.com/" target="_blank">GitHub</a></li>
-    </ul>
+  <div class="ru">
+    <h2>Научные и библиометрические ресурсы</h2>
+
+    <div class="card">
+      <ul>
+        <li><a href="https://elibrary.ru/" target="_blank">eLibrary</a></li>
+        <li><a href="https://scholar.google.com/" target="_blank">Google Scholar</a></li>
+        <li><a href="https://orcid.org/0009-0002-7903-247X" target="_blank">ORCID</a></li>
+        <li><a href="https://www.mendeley.com/" target="_blank">Mendeley</a></li>
+        <li><a href="https://www.researchgate.net/" target="_blank">ResearchGate</a></li>
+        <li><a href="https://www.academia.edu/" target="_blank">Academia.edu</a></li>
+        <li><a href="https://arxiv.org/" target="_blank">arXiv</a></li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
   </div>
+
+  <div class="en">
+    <h2>Scientific and Bibliometric Resources</h2>
+
+    <div class="card">
+      <ul>
+        <li><a href="https://elibrary.ru/" target="_blank">eLibrary</a></li>
+        <li><a href="https://scholar.google.com/" target="_blank">Google Scholar</a></li>
+        <li><a href="https://orcid.org/0009-0002-7903-247X" target="_blank">ORCID</a></li>
+        <li><a href="https://www.mendeley.com/" target="_blank">Mendeley</a></li>
+        <li><a href="https://www.researchgate.net/" target="_blank">ResearchGate</a></li>
+        <li><a href="https://www.academia.edu/" target="_blank">Academia.edu</a></li>
+        <li><a href="https://arxiv.org/" target="_blank">arXiv</a></li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+
 </div>
+
 
 <!-- BLOG -->
-<div class="section" id="blog">
- <h2>Блог</h2>
+<div class="card">
 
-<!-- WEEKLY POST -->
-<div class="card">
-  <strong>Что я сделала на этой неделе</strong>
- <img src="week.jpg" class="blog-img">
-  <p>
-    На этой неделе я продолжила работу над персональным сайтом.
-    Я добавила раздел научных ресурсов и улучшил структуру сайта.
-  </p>
-  <p>
-    Также я изучила оформление отчётов, создание презентаций
-    и работу с библиографией.
-  </p>
+  <div class="ru">
+    <strong>Что я сделала на этой неделе</strong>
+
+    <img src="week.jpg" class="blog-img">
+
+    <p>
+      На этой неделе я продолжила работу над персональным сайтом.
+      Я добавила раздел научных ресурсов и улучшила структуру сайта.
+    </p>
+
+    <p>
+      Также я изучила оформление отчётов, создание презентаций
+      и работу с библиографией.
+    </p>
+
+    <!-- НОВОЕ ФОТО -->
+    <img src="language.jpg" class="blog-img">
+
+    <p>
+      Кроме того, я научилась добавлять поддержку двух языков на веб-сайт.
+      Я изучила основы JavaScript для переключения между русским и английским языками
+      и перевела основные разделы сайта на английский язык.
+    </p>
+  </div>
+
+  <div class="en">
+    <strong>What I Did This Week</strong>
+
+    <img src="week.jpg" class="blog-img">
+
+    <p>
+      This week I continued working on my personal website.
+      I added a scientific resources section and improved the website structure.
+    </p>
+
+    <p>
+      I also studied report writing, presentation creation,
+      and bibliography management.
+    </p>
+
+    <!-- NEW PHOTO -->
+    <img src="language.jpg" class="blog-img">
+
+    <p>
+      In addition, I learned how to add bilingual support to a website.
+      I studied the basics of JavaScript for switching between Russian and English
+      and translated the main sections of the website into English.
+    </p>
+  </div>
+
 </div>
-<div class="card">
-  <strong>Что я сделала на второй неделе</strong>
-<img src="week2.jpg" class="blog-img">
-  <p>
-    На этой неделе я добавила проекты на сайт и улучшил структуру блога.
-    Также начала изучать научное программирование.
-  </p>
-</div>
+
+
 <!-- COMBINED POST -->
 <div class="card">
-  <strong>Оформление отчёта, презентации и библиография</strong>
- <img src="git.png" class="blog-img">
-  <p>
-    Оформление отчёта требует правильной структуры:
-    введение, основная часть и заключение.
-    Также важно использовать список литературы.
-  </p>
 
-  <p>
-    Презентации должны быть краткими, понятными и визуальными.
-    Использование изображений и графиков улучшает восприятие информации.
-  </p>
+  <div class="ru">
+    <strong>Оформление отчёта, презентации и библиография</strong>
 
-  <p>
-    Библиография помогает подтвердить источники информации.
-    Инструменты, такие как Mendeley, упрощают работу с научными статьями.
-  </p>
+    <img src="git.png" class="blog-img">
+
+    <p>
+      Оформление отчёта требует правильной структуры:
+      введение, основная часть и заключение.
+      Также важно использовать список литературы.
+    </p>
+
+    <p>
+      Презентации должны быть краткими, понятными и визуальными.
+      Использование изображений и графиков улучшает восприятие информации.
+    </p>
+
+    <p>
+      Библиография помогает подтвердить источники информации.
+      Инструменты, такие как Mendeley, упрощают работу с научными статьями.
+    </p>
+  </div>
+
+  <div class="en">
+    <strong>Report Writing, Presentations and Bibliography</strong>
+
+    <img src="git.png" class="blog-img">
+
+    <p>
+      Writing a report requires a proper structure:
+      introduction, main body, and conclusion.
+      It is also important to include a list of references.
+    </p>
+
+    <p>
+      Presentations should be concise, clear, and visually appealing.
+      The use of images and charts improves understanding.
+    </p>
+
+    <p>
+      Bibliography helps verify information sources.
+      Tools such as Mendeley simplify working with scientific articles.
+    </p>
+  </div>
+
 </div>
 
 <!-- OPTIONAL LATEX -->
 <div class="card">
-  <strong>LaTeX</strong>
-  <p>
-    LaTeX используется для создания научных документов,
-    особенно с математическими формулами.
-  </p>
+
+  <div class="ru">
+    <strong>LaTeX</strong>
+
+    <p>
+      LaTeX используется для создания научных документов,
+      особенно содержащих математические формулы.
+      Он позволяет создавать качественно оформленные статьи,
+      отчёты и дипломные работы.
+    </p>
+  </div>
+
+  <div class="en">
+    <strong>LaTeX</strong>
+
+    <p>
+      LaTeX is used for creating scientific documents,
+      especially those containing mathematical formulas.
+      It allows users to produce professionally formatted
+      articles, reports, and academic papers.
+    </p>
+  </div>
+
 </div>
 <div class="card">
-  <strong>Языки научного программирования</strong>
-  <p>
-    Для научных вычислений используются языки Python, MATLAB и R.
-    Python является самым популярным благодаря библиотекам NumPy, Pandas и Matplotlib.
-  </p>
-</div>
+
+  <div class="ru">
+    <strong>Языки научного программирования</strong>
+
+    <p>
+      Для научных вычислений используются языки Python, MATLAB и R.
+      Python является самым популярным благодаря библиотекам NumPy, Pandas и Matplotlib.
+    </p>
+  </div>
+
+  <div class="en">
+    <strong>Scientific Programming Languages</strong>
+
+    <p>
+      Python, MATLAB, and R are used for scientific computing.
+      Python is the most popular because of libraries such as NumPy, Pandas, and Matplotlib.
+    </p>
+  </div>
 <!-- PROJECTS -->
 <div class="section" id="projects">
-  <h2>Проекты</h2>
 
-  <div class="card">
-    <strong>Персональный сайт</strong>
-    <p>
-      Разработка сайта с использованием HTML и CSS.
-      Размещение проекта на GitHub Pages.
-    </p>
+  <div class="ru">
+    <h2>Проекты</h2>
+
+    <div class="card">
+      <strong>Персональный сайт</strong>
+      <p>
+        Разработка сайта с использованием HTML и CSS.
+        Размещение проекта на GitHub Pages.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Python проекты</strong>
+      <p>
+        Небольшие программы на Python для изучения алгоритмов и логики.
+      </p>
+    </div>
   </div>
 
-  <div class="card">
-    <strong>Python проекты</strong>
-    <p>
-      Небольшие программы на Python для изучения алгоритмов и логики.
-    </p>
+  <div class="en">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <strong>Personal Website</strong>
+      <p>
+        Website development using HTML and CSS.
+        Project deployment on GitHub Pages.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Python Projects</strong>
+      <p>
+        Small Python programs for learning algorithms and logic.
+      </p>
+    </div>
   </div>
 
 </div>
-</div>
+<script>
+function showRU() {
+  document.querySelectorAll('.ru').forEach(el => el.style.display = 'block');
+  document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+}
+
+function showEN() {
+  document.querySelectorAll('.ru').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.en').forEach(el => el.style.display = 'block');
+}
+
+window.onload = showRU;
+</script>
 </body>
 </html>
